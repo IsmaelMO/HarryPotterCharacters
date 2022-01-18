@@ -68,3 +68,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+### Comandos para ejecutar servidores de manera local simulados con json-server
+Api que trae todos los personajes de Harry Potter:
+npm run api-hpcharcaters
+
+Api que trae todos los personajes "Estudiantes" de Harry Potter:
+npm run api-hpstudents
+
+Api que trae todos los personajes "Staff" de Harry Potter:
+npm run api-hpstaff
+
+-- Previamente los comandos anteriores deberán de estar agregados en el archivo package.json 
+   como nuevos atributos del objeto "scripts"
+
+    "api-hpcharcaters": "json-server --watch src/api/hp-characters.json --port 5000",
+    "api-hpstudents": "json-server --watch src/api/hp-characters.json --port 5001",
+    "api-hpstaff": "json-server --watch src/api/hp-characters.json --port 5002"
+

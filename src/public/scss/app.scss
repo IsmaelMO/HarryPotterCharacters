@@ -97,8 +97,7 @@ $hufflepuff: linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
 }
 
   .img-profile{
-    background-image: url('../images/harry.svg');
-    width: 75%;
+    
     height: 150px;
     background-repeat: no-repeat;
     margin-left: auto;
@@ -109,6 +108,17 @@ $hufflepuff: linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
     border-bottom-right-radius: 100px;
     border-bottom: 0;
 
+  }
+
+  .img-character{
+    width: 100% !important;
+    height: 150px !important;
+    object-fit: cover;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom: 0;
   }
   
   .hogwarts-house-gryffindor{
@@ -127,13 +137,14 @@ $hufflepuff: linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
   }
 
   .data-character-container{
-      background: white;
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 22px;
-      padding-bottom: 22px;
-      border-top-right-radius: 16px;
-      border-bottom-right-radius: 16px;
+    width: 305px;
+    background: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
   }
 
   .data-top{

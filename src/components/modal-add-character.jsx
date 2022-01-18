@@ -1,4 +1,4 @@
-import { Button,Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 var React = require('react');
 
 class ModalAddCharacter extends React.Component{
