@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family:"Harry Potter";
+  src:url("./public/fonts/HARRP___.ttf") format("truetype");font-weight:normal;font-style:normal;}
