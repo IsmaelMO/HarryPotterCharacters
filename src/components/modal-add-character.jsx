@@ -1,5 +1,8 @@
 import { Modal } from 'react-bootstrap'
+import axios from 'axios';
 var React = require('react');
+
+const strApiCharacter = "http://localhost:5000/characters";
 
 class ModalAddCharacter extends React.Component{
 
@@ -12,10 +15,59 @@ class ModalAddCharacter extends React.Component{
         self.props.showModalAddCharacter(false)
     }
 
+    postData(){
+
+        
+        /*test post */
+        var requestBody = {
+            "name":"Harry PotterXD",
+            "species":"human",
+            "gender":"malessss",
+            "house":"Gryffindor xd",
+            "dateOfBirth":"31-07-1980",
+            "yearOfBirth":1980,
+            "ancestry":"half-blood",
+            "eyeColour":"green",
+            "hairColour":"black",
+            "wand":{
+                "wood":"holly",
+                "core":"phoenix feather",
+                "length":11
+            },
+            "patronus":"stag",
+            "hogwartsStudent":true,
+            "hogwartsStaff":false,
+            "actor":"Daniel Radcliffe",
+            "alive":true,
+            "image":"http://hp-api.herokuapp.com/images/harry.jpg"
+        };
+
+        let config = {
+            body: requestBody,
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept' : "*/*"
+            }
+        };
+
+        var options = {
+            body: requestBody,
+            headers: {"content-type": "application/json"}
+        }
+        
+
+       
+         axios.post(strApiCharacter,requestBody)
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => console.error(error));
+    }
+
     renderModalPopUp() {
         
         return (
-          <div >
+          <div className='mymodal-container'>
             <Modal show={this.props.showModal} onHide={()=>this.handleModal()} dialogClassName={"my-modal"}>
               <Modal.Header closeButton>
                 <Modal.Title>Agrega un personaje</Modal.Title>
@@ -79,7 +131,7 @@ class ModalAddCharacter extends React.Component{
               </Modal.Body>
               <Modal.Footer className={"justify-content-center"}>
                 
-                <button variant="primary" className={"text-uppercase save-character"}>
+                <button variant="primary" className={"text-uppercase save-character"} onClick={(e) => this.postData()}>
                   Guardar
                 </button>
               </Modal.Footer>

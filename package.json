@@ -26,8 +26,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "api-hpcharcaters": "json-server --watch src/api/hp-characters.json --port 5000",
-    "api-hpstudents": "json-server --watch src/api/hp-characters.json --port 5001",
-    "api-hpstaff": "json-server --watch src/api/hp-characters.json --port 5002"
+    "api-hpstudents": "json-server --watch src/api/hp-students.json --port 5001",
+    "api-hpstaff": "json-server --watch src/api/hp-staff.json --port 5002"
   },
   "eslintConfig": {
     "extends": [

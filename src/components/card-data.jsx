@@ -10,15 +10,8 @@ class CardData extends React.Component{
         super(props);
     }
 
-    componentDidMount(){
-        console.log("data us")
-        console.log(this.props.dataCard)
-    }
-    
-
     render(){
         var self = this;
-        console.log(self.props.dataCard)
         var hogwartshouse = "hogwarts-house-gryffindor";
         if(self.props.dataCard != undefined){
             if(this.props.dataCard.house == "Slytherin"){
@@ -30,13 +23,11 @@ class CardData extends React.Component{
             }
         }else{ return <div></div>}
         return(
-            <div className='card-data-container mb-5'>
+            <div className='card-data-container'>
                 <div className={'img-profile-container ' + hogwartshouse}>
-                    
                     <div className='img-profile'>
                         <img className='img-character' src={this.props.dataCard.image} alt="" />
                     </div>
-                    
                 </div>
                 <div className='data-character-container pl-2'> 
                     <div className='data-top'>
@@ -45,22 +36,25 @@ class CardData extends React.Component{
                     </div>
                     <div className='data-bottom mb-2 pl-2'>
                         <label className='name-character h3'>{this.props.dataCard.name}</label>
-                        <div>
-                            <label className='h6'>Cumpleaños: </label>&nbsp;
-                            <label>{this.props.dataCard.dateOfBirth}</label>
+                        <div className='personal-data'>
+                            <div>
+                                <label className='h6'>Cumpleaños: </label>&nbsp;
+                                <label>{this.props.dataCard.dateOfBirth}</label>
+                            </div>
+                            <div>
+                                <label className='h6'>Género: </label>&nbsp;
+                                <label className='text-capitalize'>{this.props.dataCard.gender}</label>
+                            </div>
+                            <div>
+                                <label className='h6'>Color de ojos: </label>&nbsp;
+                                <label className='text-capitalize'>{this.props.dataCard.eyeColour}</label>
+                            </div>
+                            <div>
+                                <label className='h6'>Color de pelo: </label>&nbsp;
+                                <label className='text-capitalize'>{this.props.dataCard.hairColour}</label>
+                            </div>
                         </div>
-                        <div>
-                            <label className='h6'>Género: </label>&nbsp;
-                            <label className='text-capitalize'>{this.props.dataCard.gender}</label>
-                        </div>
-                        <div>
-                            <label className='h6'>Color de ojos: </label>&nbsp;
-                            <label className='text-capitalize'>{this.props.dataCard.eyeColour}</label>
-                        </div>
-                        <div>
-                            <label className='h6'>Color de pelo: </label>&nbsp;
-                            <label className='text-capitalize'>{this.props.dataCard.hairColour}</label>
-                        </div>
+                        
                         
                     </div>
                 </div>

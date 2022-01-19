@@ -15,7 +15,7 @@ class Header extends React.Component{
 
     render(){
         return(
-            <div className='nav-bar mb-3'>
+            <div className='nav-bar nav-bar-actions '>
                 <button className='btn-header btn-left'>Favoritos xd &nbsp;
                     <FontAwesomeIcon icon={faBookmark}/>
                 </button>
