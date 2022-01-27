@@ -164,13 +164,18 @@ $hufflepuff: linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
       margin-right: 20px;
   }
 
-  .input-modal{
+  .input-modal, .input-modal:focus {
       width: 100%;
       height: 73px;
       background: #F2F3F3;
       border: none;
       border-bottom: 1px solid #263238;
   }
+
+  .input-selector, .input-selector:focus{
+    border: none !important;
+    border-bottom: 1px solid gray !important;
+}
 
   .save-character{
       width: 288px !important;

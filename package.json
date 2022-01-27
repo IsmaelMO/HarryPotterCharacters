@@ -25,9 +25,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api-hpcharcaters": "json-server --watch src/api/hp-characters.json --port 5000",
-    "api-hpstudents": "json-server --watch src/api/hp-students.json --port 5001",
-    "api-hpstaff": "json-server --watch src/api/hp-staff.json --port 5002"
+    "start-servers": "npm-run-all -p api-hp:*",
+    "api-hp:charcaters": "json-server --watch src/api/hp-characters.json --port 5000",
+    "api-hp:students": "json-server --watch src/api/hp-students.json --port 5001",
+    "api-hp:staff": "json-server --watch src/api/hp-staff.json --port 5002"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "mini-css-extract-plugin": "2.4.5"
+    "mini-css-extract-plugin": "2.4.5",
+    "npm-run-all": "^4.1.5"
   }
 }
